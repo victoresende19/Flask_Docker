@@ -14,6 +14,6 @@ def hora():
     from datetime import datetime
     return f'Hora: {datetime.now()}'
 
-@app.route('/soma', methods=['GET'])
-def soma(a=2, b=3):
+@app.route('/soma/<int:a>/<int:b>', methods=['GET'])
+def soma(a, b):
     return f'A soma de {a} + {b} é igual a {a+b}'
